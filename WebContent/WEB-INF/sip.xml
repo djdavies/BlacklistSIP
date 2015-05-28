@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sip-app>
+ 
+	<app-name>BlacklistSIP</app-name>
+	<display-name>BlacklistSIP</display-name>
+	<description>BlacklistSIP</description>
+	
+	<main-servlet>
+		BlacklistSIP
+	</main-servlet>
+
+	<servlet>
+		<servlet-name>BlacklistSIP</servlet-name>
+		<display-name>BlacklistSIP</display-name>
+		<description>BlacklistSIP</description>
+		<servlet-class>
+			org.example.servlet.sip.BlacklistSIP
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>blacklist_addr</param-name>
+			<param-value>sip:bob@172.18.102.166:5065</param-value>
+		</init-param>
+	</servlet>
+
+</sip-app>
